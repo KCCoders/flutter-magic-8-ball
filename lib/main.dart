@@ -25,7 +25,7 @@ class _EightBallPageState extends State<EightBall> {
   AudioPlayer audioPlayer;
 
   Timer _timer;
-  int _start = 10;
+  int _start = 3;
 
   @override
   void initState() {
@@ -107,7 +107,7 @@ class _EightBallPageState extends State<EightBall> {
 
   void startTimer() {
     isRefreshing = true;
-    const duration = const Duration(seconds: 2);
+    const duration = const Duration(seconds: 1); // how often the timer runs
     _timer = new Timer.periodic(
       duration,
       (Timer timer) => setState(
